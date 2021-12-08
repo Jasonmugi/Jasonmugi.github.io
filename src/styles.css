@@ -11,7 +11,7 @@ min-height: 100vh;
 min-width: 300px;
 overflow-x: hidden;
 text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-transition: all 1.4s ease-in-out 0.5s;
+transition: all 500ms ease-in-out 0.5s;
 scroll-behavior: smooth;
 }
 
@@ -26,7 +26,7 @@ text-decoration: none;
 
 section{
 background-color: #5062AA;
-border: solid black 1px;
+border: solid black 0px;
 }
 .hero{
 background-color: #2D1832;
@@ -39,9 +39,13 @@ height: 500px;
 background-color: black;
 }
 
+.nav-section{
+    background-color: #2D1832;
+}
 nav{
 display: flex;
 justify-content: space-between;
+width: 100%;
 }
 nav ul{
 display: flex;
@@ -52,24 +56,112 @@ font-size: 1.2rem;
 font-weight: 300;
 font-family: 'Montserrat', sans-serif;
 font-weight: 700;
+
 }
 li{
 padding: 7px;
 }
 nav li:hover{
 color: #e34c09;
-border-radius: 33px;
-transition: background-color 133ms ease-in;
-height: 37px;
 text-align: center;
-padding-bottom: 5px;
 cursor: pointer;
-background-color: #5a189a;
-transition: background-color 300ms ease-out;
 }
 
 .logo{
 font-size: 36px;
+}
+
+#nav-toggle { 
+    cursor: pointer; 
+    padding: 10px 35px 16px 0px;
+    float: right;
+    position: absolute;
+    right: 7px;
+    top:14px;
+    display: none;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after :hover{
+    background: #e34c09;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(405deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-405deg);
+}
+
+@media only screen and (max-width: 799px){
+    nav ul{
+        display: none;
+    }
+    #nav-toggle{
+        display: block;
+    }
+   
+    nav ul.activate{ 
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 30vw;
+        top: 9vh;
+        backdrop-filter: blur(7px);
+        align-items: center;
+        border-radius: 15px;
+        height: 33vh;
+        border:1spx solid #e34c09;
+        border-top: transparent;
+        transition: all 500ms ease-in-out;
+        -webkit-box-shadow: -1px 8px 12px -2px rgba(227,76,9,0.36); 
+        box-shadow: -1px 8px 12px -2px rgba(227,76,9,0.36);
+        text-align: center;
+    }
+    nav ul.activate{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 30vw;
+        top: 9vh;
+        backdrop-filter: blur(7px);
+        align-items: center;
+        border-radius: 15px;
+        height: 33vh;
+        border:1spx solid #e34c09;
+        border-top: transparent;
+        transition: all 500ms ease-in-out;
+        text-align: center;
+        -webkit-box-shadow: -1px 0px 12px -2px #F3F3F3; 
+        box-shadow: -1px 0px 12px -2px #F3F3F3;
+    }
+    nav ul.hideIt{
+        display: none;
+    }
+   
 }
 
 .hero-area{
