@@ -183,6 +183,29 @@ cursor: pointer;
         font-size: 54px;
         line-height: 120px;
     }
+
+    .form-div{
+       
+        height: 70%;
+        width: 100%;
+    }
+    form{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #requests{
+        width: 40%;
+        height: 60%;
+    }
+    .personal-contact-div{
+        display:flex;
+        width: auto;
+        margin-bottom: 5%;
+    }
+    .form-submit-section{
+     
+    }
    
 }
 
@@ -319,5 +342,115 @@ min-width: 130px;
     box-shadow: 10px 11px 32px -10px #110B0A;
     margin: 22px auto;
 }
+
+.form-submit-section{
+    display: flex;
+    background: linear-gradient(#f1e3e4 20%, thistle 80% );
+    color:#2D1832;
+    height: auto;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-submit-section h3{
+    clear: both;
+    font-size: 54px;
+    margin-top: 20px;
+}
+.form-div{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    position: relative;
+    height: 67%;
+    width: 60%;
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    padding: 40px 10px;
+    
+}
+.form-div p{
+    margin-bottom: 0;
+}
+
+.personal-contact-div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    background-color:;
+}
+.contact-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 90%;
+    background-color:;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 10px;
+}
+#username {
+    width: 40%;
+    padding: 15px 10px;
+    margin: 20px 10px;
+    background: wheat;
+}
+#requests{
+    width: 40%;
+    padding: 30px 20px;
+    margin: 20px 10px;
+    background: wheat;
+}
+#email{
+    width: 40%;
+    padding: 15px 10px;
+    margin: 20px 10px;
+    background: wheat;
+}
+#form-submit-button{
+    
+    right: 66%;
+    top: 99%;
+    background-color: #f85e00;
+    width:70px;
+    height: 35px;
+    margin: 15px 10px 15px 10px;
+    border-radius: 6px;
+    border: none;
+    
+}
+#form-submit-button:hover{
+    cursor: pointer;
+}
+
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 133px;
+    border: 1px solid black; 
+    background-color: blanchedalmond;
+    border-radius: 8px;
+    text-align: center;
+    margin: 12px 7px;
+}
+
+
 
 
