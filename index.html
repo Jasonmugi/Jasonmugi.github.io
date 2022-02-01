@@ -101,7 +101,7 @@
         <ul class="ul_target">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a>Contacts</a></li>
+          <li><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
       <a id="nav-toggle" href="#"><span></span></a>
@@ -175,9 +175,7 @@
         <div class="line-split-1"></div>
         <h2>About Me</h2>
         <p>
-          Hello, I am a junior web developer with some design tricks up my
-          sleeves. I can design beautiful and inviting posters for any sort of
-          event.
+          Hello, I am a junior web developer with one solid year of experince in javascript and react. I'm passoinate about what I do and would love to work together with you to make something amazing.
         </p>
       </div>
       <figure class="picture">
@@ -191,16 +189,18 @@
     </section>
 
     <section class="sub-section-projects" id="projects">
-      <h2>Projects</h2>
-      <div class="line-split"></div>
+      <h2>Projects
+        
+      </h2>
+      
       <div class="project-container">
-        <div class="project-card"></div>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
+        <div class="project-card">Coming Soon!</div>
+        <div class="project-card">Coming Soon!</div>
+        <div class="project-card">Coming Soon!</div>
       </div>
     </section>
 
-    <section class="form-submit-section">
+    <section class="form-submit-section" id="contacts">
     
       
       <div class="personal-contact-div">
@@ -225,17 +225,21 @@
         
         <form action="https://formsubmit.co/mugijay5@gmail.com" method="POST">
           
-          <input type="text" name="text" required id="username" placeholder="name"/>
-
           
-         
-          <textarea  id="requests" placeholder="any requests or comments...">
-            message
-          </textarea>
           
+          
+          
+          <input type="text" name="text" required id="message-form-field" placeholder="Message"/>
 
-          <label for="email">Where should I reply: </label>
+          <label for="email"><span id="email-span">where should I reply </span> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="20" height="20"
+            class="email-arrow"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#34495e"><path d="M85.89502,7.06868c-3.95528,0.05796 -7.11579,3.30931 -7.06169,7.26465v126.03255l-12.84961,-12.84961c-1.79752,-1.87223 -4.46675,-2.62641 -6.97825,-1.97168c-2.5115,0.65472 -4.47282,2.61605 -5.12755,5.12755c-0.65472,2.5115 0.09946,5.18073 1.97168,6.97825l25.08333,25.08333c2.7988,2.79764 7.33531,2.79764 10.13411,0l25.08333,-25.08333c1.87223,-1.79752 2.62641,-4.46675 1.97168,-6.97825c-0.65472,-2.5115 -2.61605,-4.47282 -5.12755,-5.12755c-2.5115,-0.65472 -5.18073,0.09946 -6.97825,1.97168l-12.84961,12.84961v-126.03255c0.02648,-1.93592 -0.73136,-3.80021 -2.10105,-5.16858c-1.36969,-1.36837 -3.23471,-2.12442 -5.1706,-2.09607z"></path></g></g></svg></label>
           <input type="email" name="email" id="email" required placeholder="email@example.com" />
+          
+          
+
 
           <button id="form-submit-button" type="submit">Send</button>
         </form>

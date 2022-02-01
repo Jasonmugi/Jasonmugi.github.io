@@ -195,9 +195,14 @@ cursor: pointer;
         align-items: center;
     }
     #requests{
-        width: 40%;
+        width: 60%;
         height: 60%;
     }
+    #email-span{
+        width: 0%;
+        height: 60%;
+    }
+
     .personal-contact-div{
         display:flex;
         width: auto;
@@ -335,12 +340,28 @@ min-width: 130px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.line-split-2{
+    position: relative;
+    background-color: #f85e00;
+    width: 18%;
+    height: 3px;
+    left: 49%;
+    z-index: 1;
+    top: 3px;
+   
+}
 .project-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 270px;
     -webkit-box-shadow: 10px 11px 32px -10px #110B0A; 
     box-shadow: 10px 11px 32px -10px #110B0A;
     margin: 22px auto;
+    border-radius: 5px;
+    color: rgb(104, 103, 103);
+    font-size: 12px;
 }
 
 .form-submit-section{
@@ -403,23 +424,24 @@ form{
     align-items: center;
     font-size: 10px;
 }
-#username {
-    width: 40%;
-    padding: 15px 10px;
-    margin: 20px 10px;
-    background: wheat;
-}
-#requests{
-    width: 40%;
+#message-form-field{
+    width: 60%;
     padding: 30px 20px;
     margin: 20px 10px;
     background: wheat;
 }
 #email{
-    width: 40%;
+    width: 60%;
     padding: 15px 10px;
     margin: 20px 10px;
     background: wheat;
+}
+#email-span{
+    font-size: 18px;
+}
+.email-arrow{
+   position: relative;
+   top:6px;
 }
 #form-submit-button{
     
