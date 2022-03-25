@@ -350,12 +350,12 @@ min-width: 130px;
     top: 3px;
    
 }
-.project-card{
+.coming-soon{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 270px;
+    width: 250px;
+    height: 350px;
     -webkit-box-shadow: 10px 11px 32px -10px #110B0A; 
     box-shadow: 10px 11px 32px -10px #110B0A;
     margin: 22px auto;
@@ -363,6 +363,38 @@ min-width: 130px;
     color: rgb(104, 103, 103);
     font-size: 12px;
 }
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    -webkit-box-shadow: 10px 11px 32px -10px #110B0A; 
+    box-shadow: 10px 11px 32px -10px #110B0A;
+    margin: 22px auto;
+    border-radius: 5px;
+    color: #2D1832;
+    font-size: 16px;
+}
+.project-card p{
+    position: relative;
+    top: 5%;
+}
+.project-link-button{
+    position: relative;
+    top: 8%;
+    border: 1px solid #2D1832;
+    border-radius: 4px;
+    width: 50%;
+}
+.project-link-button:hover{
+    border: 1px solid #f85e00;
+    color: #f85e00;
+}
+
 
 .form-submit-section{
     display: flex;
@@ -471,8 +503,20 @@ form{
     border-radius: 8px;
     text-align: center;
     margin: 12px 7px;
+    
 }
 
+.todoApp-img{
 
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    text-align: center;
+    color:rgb(104, 103, 103)
+}
 
 
