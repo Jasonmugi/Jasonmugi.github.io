@@ -367,7 +367,7 @@ min-width: 130px;
 .project-card{
     display: flex;
     flex-direction: column;
-    position: relative;
+    
     
     align-items: center;
     width: 250px;
@@ -381,18 +381,24 @@ min-width: 130px;
 }
 .project-card p{
     position: relative;
-    top: 5%;
+    padding: 3% 2%;
+}
+.button-div{
+    width: 50%;
 }
 .project-link-button{
     position: relative;
-    top: 8%;
     border: 1px solid #2D1832;
+    background-color: #2D1832;
+    color: wheat;
     border-radius: 4px;
-    width: 50%;
+   
+   padding: 2px 16px;
 }
-.project-link-button:hover{
+.project-link-button:hover {
+    cursor: pointer;
     border: 1px solid #f85e00;
-    color: #f85e00;
+    background-color: #f85e00;
 }
 
 
