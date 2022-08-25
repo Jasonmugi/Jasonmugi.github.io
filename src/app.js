@@ -1,18 +1,31 @@
 
-document.querySelector( "#nav-toggle" )
-  .addEventListener( "click", function(e) {
-    this.classList.toggle( "active" );
-    document.querySelector("nav ul").classList.toggle("activate");
-    document.querySelector(".bgOverlay").classList.toggle("activate");
+const navToggle = document.querySelector( "#nav-toggle" );
+const navUl = document.querySelector("nav ul");
+const bgOverlay = document.querySelector(".bgOverlay");
+
+navToggle.addEventListener( "click", function(e) {
+    navToggle.classList.toggle( "active" );
+    navUl.classList.toggle("activate");
+    bgOverlay.classList.toggle("activate");
     e.stopPropagation();
 });
-document.querySelector(".bgOverlay").addEventListener('click', function(e){
-  document.querySelector("#nav-toggle").classList.toggle("active")
-  document.querySelector("nav ul").classList.toggle("activate");
-  document.querySelector(".bgOverlay").classList.toggle("activate");
+
+document.querySelector(".bgOverlay").addEventListener('click', 
+function(e){
+  navToggle.classList.toggle("active");
+  navUl.classList.toggle("activate");
+  bgOverlay.classList.toggle("activate");
 })
 
+window.addEventListener('scroll', () => {
 
+if(window.scrollY > window.innerHeight/2 && document.querySelector("#nav-toggle").classList.contains("active")){
+  navToggle.classList.remove("active");
+  navUl.classList.remove("activate");
+  bgOverlay.classList.remove("activate");
+  console.log("crossed half of viewport!!!");
+}
+});
 
 /*
 ;(function ($) {
