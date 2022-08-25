@@ -3,11 +3,13 @@ document.querySelector( "#nav-toggle" )
   .addEventListener( "click", function(e) {
     this.classList.toggle( "active" );
     document.querySelector("nav ul").classList.toggle("activate");
+    document.querySelector(".bgOverlay").classList.toggle("activate");
     e.stopPropagation();
 });
-document.querySelector('html').addEventListener('click', function(){
-    
-    
+document.querySelector(".bgOverlay").addEventListener('click', function(e){
+  document.querySelector("#nav-toggle").classList.toggle("active")
+  document.querySelector("nav ul").classList.toggle("activate");
+  document.querySelector(".bgOverlay").classList.toggle("activate");
 })
 
 

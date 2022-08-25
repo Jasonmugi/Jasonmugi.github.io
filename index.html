@@ -10,8 +10,11 @@
       href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <div class="bgOverlay"></div>
+
     <section class="nav-section">
       <nav>
         <div class="logo">
@@ -108,8 +111,9 @@
     </section>
 
     <section class="hero">
+
       <div class="hero-area">
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="700">
           <h1>Jason Mugi</h1>
           <div class="line-split"></div>
           <p>Front End Developer</p>
@@ -170,15 +174,18 @@
         </div>
       </div>
     </section>
+
     <section class="sub-section" id="about">
-      <div class="information">
+
+      <div class="information" data-aos="fade-right" data-aos-duration="700">
         <div class="line-split-1"></div>
         <h2>About Me</h2>
         <p>
           Hello, I am a junior web developer with one solid year of experince in javascript and react. I'm passionate about what I do and would love to work together with you to make something amazing.
         </p>
       </div>
-      <figure class="picture">
+
+      <figure class="picture" data-aos="fade-left" data-aos-duration="700">
         <img
           id="pictureImage"
           class="picture-image"
@@ -186,14 +193,15 @@
           alt="potrait of Jason"
         />
       </figure>
+
     </section>
 
     <section class="sub-section-projects" id="projects">
-      <h2>Projects
+      <h2 data-aos="fade-down" data-aos-offset="200" data-aos-duration="700">Projects
         
       </h2>
       
-      <div class="project-container">
+      <div class="project-container"  data-aos="fade-up" data-aos-duration="700"data-aos-offset="200">
         <div class="project-card comming-soon">
           <img class='todoApp-img' src="src/images/todo.png" alt="todo thambnail">
           <p>
@@ -211,12 +219,12 @@
     
       
       <div class="personal-contact-div">
-          <h3>Contacts</h3>
-          <div class="contact-cards">
+          <h3 data-aos="zoom-out" data-aos-duration="700"data-aos-offset="200">Contacts</h3>
+          <div class="contact-cards" data-aos="zoom-in-left" data-aos-duration="700"data-aos-offset="200">
 
             <div class="phone-number contact-card">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.445 17.827c-3.684 1.684-9.401-9.43-5.8-11.308l1.053-.519 1.746 3.409-1.042.513c-1.095.587 1.185 5.04 2.305 4.497l1.032-.505 1.76 3.397-1.054.516z"/></svg>
-              <p>+254 751788293</p>
+              <p>+254 769379995</p>
             </div>
 
             <div class="email contact-card">
@@ -227,7 +235,8 @@
           </div>
 
       </div>
-      <div class="form-div">
+
+      <div class="form-div" data-aos="zoom-in-right" data-aos-duration="700"data-aos-offset="200">
         <p>Whats the story? Get in touch. Always available for a gig.</p>
         
         <form action="https://formsubmit.co/mugijay5@gmail.com" method="POST">
@@ -266,5 +275,9 @@
     ></script>
     <script src="src/app.js"></script>
     <script src="https://kit.fontawesome.com/6edeced662.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

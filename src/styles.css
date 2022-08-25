@@ -116,6 +116,14 @@ cursor: pointer;
   transform: rotate(-45deg);
 }
 
+.bgOverlay{
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(20, 3, 34, 0.818);
+}
 @media only screen and (max-width: 799px){
     nav ul{
         display: none;
@@ -141,6 +149,9 @@ cursor: pointer;
         -webkit-box-shadow: -1px 8px 12px -2px rgba(227,76,9,0.36); 
         box-shadow: -1px 8px 12px -2px rgba(227,76,9,0.36);
         text-align: center;
+    }
+    .bgOverlay.activate{
+        display: block;
     }
     nav ul{
         display: none;
@@ -467,12 +478,14 @@ form{
     padding: 30px 20px;
     margin: 20px 10px;
     background: wheat;
+    border-radius: 8px;
 }
 #email{
     width: 60%;
     padding: 15px 10px;
     margin: 20px 10px;
     background: wheat;
+    border-radius: 8px;
 }
 #email-span{
     font-size: 18px;
@@ -520,9 +533,10 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    height: 40px;
     text-align: center;
-    color:rgb(104, 103, 103)
+    color:rgb(104, 103, 103);
+    overflow: hidden;
 }
 
 
