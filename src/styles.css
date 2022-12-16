@@ -14,6 +14,12 @@ html {
   transition: all 500ms ease-in-out 0.5s;
   scroll-behavior: smooth;
 }
+body{
+  width: 100%;
+}
+section{
+  padding-bottom: 2rem;
+}
 
 a {
   color: currentColor;
@@ -121,7 +127,7 @@ nav li:hover {
   transform: rotate(45deg);
 }
 
-.bgOverlay {
+.bg__overlay {
   position: absolute;
   top: 0;
   display: none;
@@ -155,7 +161,7 @@ nav li:hover {
     box-shadow: -1px 8px 12px -2px rgba(227, 76, 9, 0.36);
     text-align: center;
   }
-  .bgOverlay.activate {
+  .bg__overlay.activate {
     display: block;
   }
   nav ul {
@@ -178,26 +184,11 @@ nav li:hover {
   nav ul.hideIt {
     display: none;
   }
-  .hero h1 {
-    line-height: 111px;
-  }
-  section#about.sub-section {
-    padding: 0px;
-  }
-  #about h2 {
-    font-size: 54px;
-    line-height: 70px;
-    color: wheat;
-  }
   .information {
     width: 60%;
     padding-left: 14px;
     margin: 0;
     font-size: 18px;
-  }
-  #projects h2 {
-    font-size: 54px;
-    line-height: 120px;
   }
 
   .form-div {
@@ -235,13 +226,11 @@ nav li:hover {
 }
 
 .hero-text h1 {
-  font-size: 90px;
+  font-size: 5rem;
   font-weight: 700;
+  opacity: 0.8;
 }
 
-.sub-section h2 {
-  font-size: 80px;
-}
 .hero-text p {
   font-size: 24px;
   font-weight: 300;
@@ -252,6 +241,12 @@ nav li:hover {
   margin-bottom: 100px;
 }
 
+
+
+.sub-section h2 {
+  font-size: 5rem;
+  line-height: 1.4;
+}
 .line-split {
   width: 28%;
   height: 3px;
@@ -291,10 +286,33 @@ nav li:hover {
 .button:active {
   background-color: #a41623;
 }
+@media only screen and (max-width: 768px){
+  .hero-text h1 {
+    line-height: 1.4;
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 377px){
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  .hero-text p {
+    font-size: 1.4rem;
+  }
+  .social-div{
+    padding-right:0px;
+    margin: 0;
+  }
+  .button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
 
 .sub-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: linear-gradient(#2d1832 7%, thistle 93%);
   color: #2d1832;
   align-items: center;
@@ -337,17 +355,50 @@ nav li:hover {
   align-items: center;
   padding-top: 8%;
   width: 100%;
-  margin: 8%;
+  margin: 8% 2rem;
   justify-content: center;
 }
-
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
+  #about h2{
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  #about {
+    padding: 2rem;
+  }
+  #about .information {
+    flex: 3;
+  }
+  #about .picture{
+    flex: 2;
+  }
 }
+@media only screen and ( max-width: 458px){
+  #about{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #about h2{
+    color: thistle;
+  }
+  .information{
+    margin: 0px;
+    width: 100%
+  }
+  .picture{
+    width: 100%;
+    margin: 0;
+  }
+}
+
 
 .project-container {
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+  
 }
 .line-split-2 {
   position: relative;
@@ -372,40 +423,69 @@ nav li:hover {
   font-size: 12px;
 }
 
+
 .project-card {
   display: flex;
   flex-direction: column;
-  object-fit: cover;
-  align-items: center;
-  width: 250px;
-  height: 350px;
+  padding: 1rem;
+  width: 300px;
   -webkit-box-shadow: 10px 11px 32px -10px #110b0a;
   box-shadow: 10px 11px 32px -10px #110b0a;
-  margin: 22px auto;
-  border-radius: 5px;
+  border-radius: 8px;
   color: #2d1832;
   font-size: 16px;
+  
+ 
 }
-.project-card p {
-  position: relative;
-  padding: 3% 2%;
+.project__card__img{
+  margin-bottom: 1rem;
 }
+.project__card__img img{
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project__card__info {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+.project__card__info p{
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+
 .button-div {
   width: 50%;
+  margin: 0 auto;
 }
 .project-link-button {
-  position: relative;
   border: 1px solid #2d1832;
   background-color: #2d1832;
   color: wheat;
   border-radius: 4px;
-
-  padding: 2px 16px;
+  padding: 0.2rem 1rem;;
+  bottom: 0rem;
 }
 .project-link-button:hover {
   cursor: pointer;
-  border: 1px solid #f85e00;
-  background-color: #f85e00;
+  border: 1px solid #2d1832;
+  color: #2d1832;
+  background-color: #f1e3e4;
+  transition: all 0.2s ease;
+}
+@media only screen and (max-width: 768px){
+  #projects h2{
+    font-size: 2.6rem;
+  }
+  .project-card{
+    width: 250px;
+  }
+  .project__card__info p {
+    font-size: 1rem;
+  }
 }
 
 .form-submit-section {
@@ -511,14 +591,12 @@ form {
   height: 133px;
   border: 1px solid black;
   background-color: blanchedalmond;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
   margin: 12px 7px;
 }
 
-.todoApp-img {
-    border-radius: 4px;
-}
+
 
 footer {
   display: flex;
